@@ -11,13 +11,26 @@ const addValue=()=>{
  
   setCount(count+1)
 }
+const removeValue=()=>{
+  if(count>0){
+    setCount(count-1)
+  }
+ else if(count==0){
+  return true
+
+ }
+ else{
+  return false;
+ }
+}
   return (
     <>
      
       <h1> Project 02 on React</h1>
-      <button onClick={addValue}>Add values</button>
+      <button onClick={addValue}>Add values {count} </button>
       <br />
-      <button >Remove values</button>
+      <button onClick ={removeValue}>Remove values {count} </button>
+      <p>footer: {count}</p>
       
       
     </>
